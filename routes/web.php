@@ -16,5 +16,8 @@ Auth::routes([
 Route::name('app.')->middleware('auth')->group(function(){
     // Dashboard Route
     Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+    Route::post('shorten/url', [HomeController::class, 'shorten'])->name('shorten');
+    Route::get('{url}', [HomeController::class, 'shortenURL'])->name('shorten.url-generate');
+    Route::post('delete', [HomeController::class, 'delete'])->name('shorten.delete');
 
 });

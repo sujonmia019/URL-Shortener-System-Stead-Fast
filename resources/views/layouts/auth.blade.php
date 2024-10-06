@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Log in</title>
+    <title>{{ config('app.name') }} | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -61,6 +61,20 @@
             border: solid #3c8dbc;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
+        }
+        .pass-text{
+            background: rgb(15 239 218 / 52%);
+            display: block;
+            padding: 2px 5px;
+            font-size: 13px;
+            color: rgb(5 106 97);
+            font-weight: 500;
+        }
+        .text-danger {
+            color: #ff1612 !important;
+        }
+        .login-logo{
+            margin-bottom: 10px !important;
         }
     </style>
 </head>

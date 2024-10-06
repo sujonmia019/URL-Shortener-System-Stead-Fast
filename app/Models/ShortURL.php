@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class ShortURL extends Model
 {
     use HasFactory;
 
@@ -14,18 +14,12 @@ class Role extends Model
      *
      * @var string
      */
-    protected $table = 'roles';
-
+    protected $table = 'short_urls';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name','slug'];
-
-    public function users()
-    {
-        return $this->hasMany(User::class);
-    }
+    protected $fillable = ['user_id','long_url','short_url','clickable'];
 }

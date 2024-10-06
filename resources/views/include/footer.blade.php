@@ -2,6 +2,6 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2024 Developer Sujon.</strong> All rights
+    <span>Copyright &copy; 2024 Developer Sujon.</span> All rights
     reserved.
   </footer>

@@ -245,8 +245,8 @@ label {
     transform: rotate(45deg);
 }
 select.input-sm {
-    height: 33px !important;
-    line-height: 33px !important;
+    height: 30px !important;
+    line-height: 30px !important;
 }
 .btn-style {
     width: 25px;

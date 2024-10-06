@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-      
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@yield('site_title') | Blank Page</title>
+    <title>@yield('site_title') | {{ config('app.name') }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -32,6 +32,18 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     {{-- Custom CSS --}}
     <link rel="stylesheet" href="{{ asset('/') }}css/custom.css">
+    <style>
+        .alert-success {
+            color: #0f5132 !important;
+            background-color: #d1e7dd !important;
+            border-color: #badbcc !important;
+        }
+        .alert-warning {
+            color: #664d03 !important;
+            background-color: #fff3cd !important;
+            border-color: #ffecb5 !important;
+        }
+    </style>
     @stack('style')
 </head>
 
@@ -62,6 +74,12 @@
 
             <!-- Main content -->
             <section class="content">
+                @if (session('success'))
+                <div class="alert alert-success py-3"><strong>Success:</strong> {{ session('success') }}</div>
+                @elseif (session('warning'))
+                <div class="alert alert-warning py-3"><strong>Success:</strong> {{ session('warning') }}</div>
+                @endif
+
                 @yield('content')
             </section>
             <!-- /.content -->
@@ -101,7 +119,6 @@
     <script src="{{ asset('/') }}js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('/') }}js/demo.js"></script>
-    <script src="{{ asset('/') }}js/custom.js"></script>
     <script>
         // ajax header setup
         $.ajaxSetup({
