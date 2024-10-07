@@ -27,7 +27,7 @@
 
             <div class="form-group">
                 <input type="password" name="password" class="form-control form-control-sm" placeholder="Password">
-                <span class="pass-text">The password must be 8–16 characters, and include a number, a symbol, a lower and a upper case letter</span>
+                <span class="pass-text">The password must be 8–16 characters, and include a number, a symbol, a lower and a upper case letter, like: 123@sujonMia</span>
                 @error('password')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror

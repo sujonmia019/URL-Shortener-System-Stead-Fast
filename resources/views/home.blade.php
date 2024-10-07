@@ -110,6 +110,7 @@
                 }else{
                     notification(response.status,response.message);
                     if(response.status == 'success'){
+                        $('#shorten_form')[0].reset();
                         $('#shorten-data').append(`<div class="alert alert-success py-3"><strong>URL:</strong> `+response.data.short_url+`</div>`);
                         table.ajax.reload();
                     }
